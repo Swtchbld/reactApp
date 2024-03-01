@@ -7,6 +7,7 @@ import PostList from './components/PostList';
 import MyButton from  './components/UI/button/MyButton';
 import MyInput from './components/UI/input/MyInput'
 import PostForm from './components/PostForm';
+import MySelect from './components/UI/select/MySelect';
 function App() {
 
 const [posts, setPosts]= useState([
@@ -29,6 +30,16 @@ const createPost=(newPost) =>{
   return (
     <div className="App">
         <PostForm create={createPost}/>
+        <hr style={{margin: '15px 0'}} />
+
+        <div>
+         <MySelect
+         defaultValue='sort by'
+         options={[{value:'title', name :'by Name'},
+         {value:'body', name:'by description'}
+        ]}
+         />
+        </div>
         {posts.length !==0
         ?<PostList  remove={removePost} posts={posts} title='Post list 1'/>
           : 
