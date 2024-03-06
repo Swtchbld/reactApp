@@ -27,7 +27,7 @@ const PostForm = ({create}) => {
            onChange={e=>setPost({...post,body:e.target.body})}
          type="text" 
          placeholder='post name' />
-        <MyButton onClick ={addNewPost}>zaza</MyButton>
+        <MyButton onClick ={addNewPost}>Create Post</MyButton>
       </form>
        
     );
