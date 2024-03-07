@@ -12,7 +12,7 @@ const PostForm = ({create}) => {
         ...post, id: Date.now()
       }
       create(newPost)
-     setPost({title:'',body:''})
+     setPost({title:'', body:''})
      }
     return (
        
@@ -24,9 +24,9 @@ const PostForm = ({create}) => {
          placeholder='post name' />
         <MyInput
            value={post.body}
-           onChange={e=>setPost({...post,body:e.target.body})}
+           onChange={e=>setPost({...post,body:e.target.value})}
          type="text" 
-         placeholder='post name' />
+         placeholder='desrc' />
         <MyButton onClick ={addNewPost}>Create Post</MyButton>
       </form>
        
